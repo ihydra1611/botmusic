@@ -13,8 +13,9 @@ const client = new Client({
 });
 
 
-DISCORD_TOKEN = "MTMxNjM4NDQwOTQzMTE4MzQ4Mw.GKjR3a.-dKTaNxk80xX0CPl0KntnWeyqYcY4AYo6f7L0E";
-client.login(DISCORD_TOKEN);
+require('dotenv').config()
+
+client.login(process.env.DISCORD_TOKEN);
 
 client.on('ready', () => {
     console.log(`Bot đã sẵn sàng: ${client.user.tag}`);
